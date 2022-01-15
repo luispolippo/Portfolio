@@ -4,7 +4,7 @@ import Backdrop from './components/Backdrop';
 import HamburguerMenu from './components/HamburguerMenu';
 import SideMenu from './components/SideMenu';
 import Abilities from './pages/Abilities';
-import Sobre from './pages/Sobre';
+import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -26,7 +26,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={ Home }/>
           <Route path="/projetos" component={ Projects } />
-          <Route path="/sobre" component={ Sobre } />
+          <Route path="/sobre" component={ About } />
           <Route path="/contato" component={ Contact } />
           <Route path="/habilidades" component={Abilities} />
         </Switch>
