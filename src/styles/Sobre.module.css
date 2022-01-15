@@ -1,0 +1,10 @@
+.text_container_sobre {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  max-width: 80%;
+}
+
+.text_container_sobre p:nth-child(2) {
+  margin: 0.6rem 0;
+}

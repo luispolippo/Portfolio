@@ -1,0 +1,107 @@
+:root {
+  --main-bg-color: rgb(10, 10, 10);
+  --typewriter-speed: 5s;
+  --typewriter-letters: 18;
+}
+
+@keyframes typewriter{
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }  
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftToRigth {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header_home {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.phrases_container {
+  margin-top: 3rem;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeIn 1s ease calc(var(--typewriter-speed) + 1s) forwards;
+}
+
+.icons_container {
+  margin-top: 5rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-3rem);
+  animation: leftToRigth 1s calc(var(--typewriter-speed) + 1.5s) forwards;
+}
+
+.header_home h1 {
+  font-size: 2.5rem;
+}
+
+.header_home h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: monospace;
+  width: max-content;
+  margin: 1rem auto 0 auto;
+  position: relative;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.header_home h2::before, .header_home h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.header_home h2::before {
+  background: var(--main-bg-color);
+  animation: typewriter var(--typewriter-speed) steps(var(--typewriter-letters)) 1s forwards;
+}
+
+.header_home h2::after {
+  width: 0.125em;
+  background: white;
+  animation: 
+    typewriter var(--typewriter-speed) steps(var(--typewriter-letters)) 1s forwards,
+    blink 0.8s steps(17) 0s infinite;
+
+}
+
+.phrases_container p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.icons_container img:hover {
+  -webkit-filter: drop-shadow(2px 2px 4px #5746b0);
+}

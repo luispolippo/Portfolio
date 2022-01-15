@@ -1,0 +1,29 @@
+.hamburguer_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #424242;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border-radius: 20px 10px 20px 10px;
+  box-shadow: 1px 2px 3px #ffffff;
+}
+
+.hamburguer_menu span {
+  width: 20px;
+  height: 1px;
+  border: 1px solid white;
+  background-color: white; 
+}
+
+.hamburguer_menu span:nth-child(2) {
+  margin: 4px 0;
+}
+
+.hamburguer_menu:hover {
+  box-shadow: 1px 2px 3px #382a81;
+}

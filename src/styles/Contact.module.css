@@ -1,0 +1,19 @@
+.icons_contact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  max-width: 70%;
+  height: 70%;
+  gap: 2rem;
+}
+
+.icons_contact img {
+  width: 80px;
+  height: 80px;
+}
+
+.icons_contact img:hover {
+  -webkit-filter: drop-shadow(2px 2px 3px #5746b0);
+}
